@@ -1,0 +1,30 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@replit/database": "^2.0.2",
+    "@types/node": "^18.0.6",
+    "body-parser": "^1.20.0",
+    "busboy": "^1.6.0",
+    "cloudinary": "^1.32.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "isomorphic-dompurify": "^0.22.0",
+    "jsonfile": "^6.1.0",
+    "linkify-html": "^4.0.2",
+    "linkify-plugin-mention": "^4.0.2",
+    "linkifyjs": "^4.0.2",
+    "node-fetch": "^3.2.6",
+    "request": "^2.88.2"
+  }
+}
