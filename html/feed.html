@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Daily Gobo</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/dark.css" rel="stylesheet" class="darkMode">
+    <script src="/js/storage.js"></script>
+  </head>
+  <body>
+    <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li style="display: none;" class="dashboardLink"><a href="/dashboard/">Dashboard</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
+    <div id="view">
+    <div class="box">
+<div class="box-header"><h4>Welcome to Your Feed, <a style="color: #4d97ff;" href="https://scratch.mit.edu/users/<%= username %>/"><%= username %></a>!</h4><h5></h5></div>
+      <div class="box-content"><p>The Daily Gobo is a blog for all things Scratch! You can contribute to the blog, and even favorite blog posts! You can find out all about the current news and so much more!</p></div>
+    </div>
+      <h2>Posts</h2>
+      <div class="posts">
+
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script>
+    if (storage.getItem("lightMode")) {
+      stylesheet.disabled = darkMode()
+    }
+    function darkMode() {
+      var stylesheet = document.querySelector('.darkMode')
+      if (stylesheet.disabled) {
+        storage.setItem("lightMode", false)
+        stylesheet.disabled = false
+      } else {
+        storage.setItem("lightMode", true)
+        stylesheet.disabled = true
+      }
+    }
+    async function getMod() {
+      var response = await fetch('/users/<%= username %>/')
+      var data = await response.json()
+      if (data.mod) {
+        var link = document.createElement('link')
+        link.href = '/css/moderator.css'
+        link.rel = 'stylesheet'
+        document.head.appendChild(link)
+      }
+    }
+    getMod()
+    async function logOut() {
+      var response = await fetch('/logout/')
+      window.location.href = 'https://thedailygobo.scratchtools.app'
+    }
+    getAllPosts()
+    async function getAllPosts() {
+      var response = await fetch('/posts/')
+      var data = await response.json()
+      Object.keys(data).forEach(function(el) {
+        try {
+          addPost()
+          async function addPost() {
+            var box = document.createElement('div')
+            box.className = 'box'
+            var boxHeader = document.createElement('div')
+            boxHeader.className = 'box-header'
+            boxHeader.appendChild(document.createElement('h4'))
+            var a = document.createElement('a')
+            a.href = '/post/'+el+'/'
+            a.textContent = `Blog post by ${data[el].author}.`
+            boxHeader.querySelector('h4').appendChild(a)
+            box.appendChild(boxHeader)
+            var boxContent = document.createElement('div')
+            boxContent.className = 'box-content'
+            boxContent.appendChild(document.createElement('span'))
+            box.appendChild(boxContent)
+            document.querySelector('.posts').prepend(box)
+            var btn = document.createElement('button')
+            btn.textContent = 'Delete'
+            btn.className = 'delete'
+            btn.style.display = 'none'
+            boxContent.appendChild(btn)
+            btn.id = el
+            btn.addEventListener('click', async function() {
+              var responseDelete = await fetch('/delete/'+el+'/')
+              window.location.href = window.location.href
+            })
+            var loveSpan = document.createElement('span')
+            loveSpan.className = 'love-span'
+            var love = document.createElement('img')
+            love.className = 'love-post'
+            if (data[el].loves.includes("<%= username %>")) {
+              love.src = 'https://scratch.mit.edu/svgs/project/love-red.svg'
+            } else {
+              love.src = 'https://scratch.mit.edu/svgs/project/love-gray.svg'
+            }
+            var loveCount = document.createElement('span')
+            loveCount.textContent = data[el].loves.length.toString()
+            loveCount.className = 'love-count'
+            loveSpan.appendChild(love)
+            loveSpan.appendChild(loveCount)
+            boxContent.appendChild(loveSpan)
+            love.addEventListener('click', async function() {
+              var response2 = await fetch('/love/'+el+'/')
+              var data2 = await response2.json()
+              if (data2.includes("<%= username %>")) {
+              love.src = 'https://scratch.mit.edu/svgs/project/love-red.svg'
+            } else {
+              love.src = 'https://scratch.mit.edu/svgs/project/love-gray.svg'
+            }
+              loveCount.textContent = data2.length.toString()
+            })
+
+            var favoriteSpan = document.createElement('span')
+            favoriteSpan.className = 'favorite-span'
+            var favorite = document.createElement('img')
+            favorite.className = 'favorite-post'
+            if (data[el].favorites.includes("<%= username %>")) {
+              favorite.src = 'https://scratch.mit.edu/svgs/project/fav-yellow.svg'
+            } else {
+              favorite.src = 'https://scratch.mit.edu/svgs/project/fav-gray.svg'
+            }
+            var favoriteCount = document.createElement('span')
+            favoriteCount.textContent = data[el].favorites.length.toString()
+            favoriteCount.className = 'love-count'
+            favoriteSpan.appendChild(favorite)
+            favoriteSpan.appendChild(favoriteCount)
+            boxContent.appendChild(favoriteSpan)
+            favorite.addEventListener('click', async function() {
+              var response2 = await fetch('/favorite/'+el+'/')
+              var data2 = await response2.json()
+              if (data2.includes("<%= username %>")) {
+              favorite.src = 'https://scratch.mit.edu/svgs/project/fav-yellow.svg'
+            } else {
+              favorite.src = 'https://scratch.mit.edu/svgs/project/fav-gray.svg'
+            }
+              favoriteCount.textContent = data2.length.toString()
+            })
+            var markdownRequest = await fetch(`/posts/post${el}.md`)
+            var markdown = await markdownRequest.text()
+            var converter = new showdown.Converter()
+            var text = markdown
+            boxContent.querySelector('span').innerHTML = converter.makeHtml(text)
+          }
+        } catch(err) {}
+      })
+    }
+  </script>
+</html>

@@ -4,6 +4,10 @@ body {
   background-color: #fcfcfc;
 }
 
+*  {
+  font-family: "Helvetica Neue","Helvetica",Arial,sans-serif;
+}
+
 #navigation {
       display: block;
     position: fixed;
@@ -137,4 +141,96 @@ ul.nav li.right {
   float: right;
     margin-left: auto;
     align-self: flex-end;
+}
+
+textarea {
+      line-height: 1.5rem;
+    transition: all .2s ease;
+    border: 2px dashed #ff9f0025;
+    border-radius: 8px;
+    background-color: #fafafa;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    line-height: 1.75em;
+    color: #575e75;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+}
+
+textarea:focus {
+      transition: all .2s ease;
+    outline: none;
+    border: 2px solid #ff9f00;
+    box-shadow: 0 0 0 4px #ff9f0025;
+}
+
+button {
+  margin-top: 0;
+    border-radius: 0.25rem;
+    padding-top: 0.6875rem;
+    padding-right: 0.9375rem;
+    padding-bottom: 0.6875rem;
+    padding-left: 0.875rem;
+    height: 2.5rem;
+    font-size: .875rem;
+    display: inline-block;
+    margin: 0.5em 0;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: #ff9f00;
+    cursor: pointer;
+    padding: 1em 1.25em;
+    color: #fff;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.modeSwitch {
+  cursor: pointer;
+}
+
+.love-post {
+  width: 1.75rem;
+  position: relative;
+  top: 0.4rem;
+  cursor: pointer;
+}
+
+.love-post[src="https://scratch.mit.edu/svgs/project/love-gray.svg"] {
+  opacity: .5;
+}
+
+.love-count {
+  margin-left: 0.3rem;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.favorite-post {
+  width: 1.75rem;
+  position: relative;
+  top: 0.4rem;
+  cursor: pointer;
+}
+
+.favorite-post[src="https://scratch.mit.edu/svgs/project/fav-gray.svg"] {
+  opacity: .5;
+}
+
+.favorite-count {
+  margin-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #4d97ff;
+}
+a {
+    cursor: pointer;
+    color: #4d97ff;
+    font-weight: bold;
+
 }

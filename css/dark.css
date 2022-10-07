@@ -1,0 +1,32 @@
+.box {
+  background-color: #323648;
+  border: 1px solid #393d60;
+}
+
+.box-header {
+  background-color: #515567;
+  color: white;
+}
+
+.box-header h4 {
+  color: white;
+}
+
+.box-content, .box-header {
+  background-color: #323648;
+  color: white !important;
+  border: 1px solid #393d60;
+}
+
+.box-content * {
+  color: white;
+}
+
+body {
+  background-color: #1c1830;
+  color: white;
+}
+
+textarea {
+  background-color: #575e75;
+}

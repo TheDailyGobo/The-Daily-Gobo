@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Daily Gobo</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/dark.css" rel="stylesheet" class="darkMode">
+    <script src="/js/storage.js"></script>
+  </head>
+  <body>
+    <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
+    <div id="view">
+    <div class="box">
+<div class="box-header"><h4>Post Something!</h4><h5></h5></div>
+      <div class="box-content"><textarea placeholder="start typing"></textarea><button onclick="post()">post</button></div>
+    </div>
+      <div class="box">
+<div class="box-header"><h4>Preview</h4><h5></h5></div>
+      <div class="box-content"><span class="preview"></span></div>
+    </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+  <script>
+    document.querySelector('textarea').addEventListener('input', function() {
+      var converter = new showdown.Converter()
+            var text = document.querySelector('textarea').value
+            document.querySelector('span.preview').innerHTML = converter.makeHtml(text)
+    })
+    async function logOut() {
+      var response = await fetch('/logout/')
+      window.location.href = 'https://thedailygobo.scratchtools.app'
+    }
+    async function post() {
+      var response = await fetch("https://thedailygobo.scratchtools.app/newblogpost/", {
+  "headers": {
+    "accept": "*/*",
+    "content-type": "application/json",
+  },
+  "referrerPolicy": "origin",
+  "body": JSON.stringify({'content':document.querySelector('textarea').value}),
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+      window.location.href = 'https://thedailygobo.scratchtools.app/feed/'
+    }
+    if (storage.getItem("lightMode")) {
+      stylesheet.disabled = true
+    }
+    function darkMode() {
+      var stylesheet = document.querySelector('.darkMode')
+      if (stylesheet.disabled) {
+        storage.setItem("lightMode", false)
+        stylesheet.disabled = false
+      } else {
+        storage.setItem("lightMode", true)
+        stylesheet.disabled = true
+      }
+    }
+  </script>
+</html>
