@@ -192,6 +192,7 @@ button {
 }
 
 .love-post {
+  transition: opacity .1s;
   width: 1.75rem;
   position: relative;
   top: 0.4rem;
@@ -209,6 +210,7 @@ button {
 }
 
 .favorite-post {
+  transition: opacity .1s;
   width: 1.75rem;
   position: relative;
   top: 0.4rem;
@@ -233,4 +235,13 @@ a {
     color: #4d97ff;
     font-weight: bold;
 
+}
+
+.timestamp {
+  display: block;
+  opacity: .5;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
+  margin-bottom: 1rem;
 }
