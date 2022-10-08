@@ -8,8 +8,8 @@ storage.getItem = function(name) {
 }
 storage.setItem = function(name, info) {
   if (!info) {
-    document.cookie = name+"="+info+"; expires=Thu, 18 Dec 0001 12:00:00 UTC";
+    document.cookie = name+"="+info+"; expires=Thu, 18 Dec 0001 12:00:00 UTC; path=/";
   } else {
-  document.cookie = name+"="+info+"; expires=Thu, 18 Dec 9999 12:00:00 UTC";
+  document.cookie = name+"="+info+"; expires=Thu, 18 Dec 9999 12:00:00 UTC; path=/";
   }
 }

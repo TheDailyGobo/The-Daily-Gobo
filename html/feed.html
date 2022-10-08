@@ -6,6 +6,7 @@
     <link href="/css/dark.css" rel="stylesheet" class="darkMode">
     <script src="/js/storage.js"></script>
     <script src="/js/timestamp.js"></script>
+    <script src="/js/badges.js"></script>
   </head>
   <body>
     <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li style="display: none;" class="dashboardLink"><a href="/dashboard/">Dashboard</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
@@ -23,7 +24,7 @@
   <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
   <script>
     if (storage.getItem("lightMode")) {
-      stylesheet.disabled = darkMode()
+      stylesheet.disabled = true
     }
     function darkMode() {
       var stylesheet = document.querySelector('.darkMode')
@@ -36,11 +37,17 @@
       }
     }
     async function getMod() {
-      var response = await fetch('/users/<%= username %>/')
+      var response = await fetch('/getmod/<%= username %>/')
       var data = await response.json()
       if (data.mod) {
         var link = document.createElement('link')
         link.href = '/css/moderator.css'
+        link.rel = 'stylesheet'
+        document.head.appendChild(link)
+      }
+      if (data.writer) {
+        var link = document.createElement('link')
+        link.href = '/css/writer.css'
         link.rel = 'stylesheet'
         document.head.appendChild(link)
       }
@@ -65,7 +72,7 @@
             boxHeader.appendChild(document.createElement('h4'))
             var a = document.createElement('a')
             a.href = '/post/'+el+'/'
-            a.textContent = `Blog post by ${data[el].author}.`
+            a.textContent = `Blog post by ${data[el].author}`
             boxHeader.querySelector('h4').appendChild(a)
             box.appendChild(boxHeader)
             var boxContent = document.createElement('div')
@@ -145,6 +152,7 @@
             timestamp.textContent = getFuzzy(data[el].time)
             timestamp.className = 'timestamp'
             boxContent.appendChild(timestamp)
+            getBadges(data[el].author, boxHeader.querySelector('h4'))
           }
         } catch(err) {}
       })

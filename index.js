@@ -1,7 +1,10 @@
 // database
 const Database = require("@replit/database")
 const db = new Database()
-const allowedToWrite = ['NFlex23', 'rgantzos', 'MaterArc']
+const allowedToWrite = ['NFlex23', 'rgantzos', 'MaterArc', 'AugieDoggie2011', 'jboys846', 'relativity-', '2022dev19', 'TheAnvils','UnofficialSDS','Virtual-Insanity','kittiemasters']
+const allowedToMod = ['rgantzos', 'MaterArc', 'TheAnvils', 
+'kittiemasters']
+const headMembers = ['MaterArc', 'rgantzos']
 
 // writing files
 const fs = require("fs");
@@ -112,6 +115,34 @@ app.get('/keeponline/', function(req, res) {
   res.send({"ok":true})
 })
 
+app.get('/users/:username/', async function(req, res) {
+  var response = await fetch('https://trampoline.turbowarp.org/proxy/users/'+req.params.username)
+  if (response.ok) {
+    var data = await response.json()
+    if (!data.error) {
+      var username = data.username
+      var postsThisWeek = 0
+      var posts = await db.get("posts")
+      Object.keys(posts).forEach(function(el) {
+        if (posts[el].author === username) {
+      var then = new Date(posts[el].time);
+var now = new Date();
+
+var msBetweenDates = Math.abs(then.getTime() - now.getTime());
+
+// 👇️ convert ms to days                 hour   min  sec   ms
+var daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000);
+
+if (daysBetweenDates < 7) {
+  postsThisWeek = postsThisWeek+1
+}
+        }
+    })
+      res.send({"username":username,"writer":(allowedToWrite.includes(username)),"moderator":(allowedToMod.includes(username)),"active":(postsThisWeek > 2)})
+    }
+  }
+})
+
 app.get('/post/:post/', async function(req, res) {
   var tokens = await db.get("tokens")
   if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
@@ -217,11 +248,11 @@ app.post('/newblogpost/', jsonParser, async function(req, res) {
   }
 })
 
-app.get('/users/:user/', async function(req, res) {
-  if (allowedToWrite.includes(req.params.user)) {
-    res.send({"mod":true})
+app.get('/getmod/:user/', async function(req, res) {
+  if (allowedToMod.includes(req.params.user)) {
+    res.send({"mod":true,"writer":(allowedToWrite.includes(req.params.user))})
   } else {
-    res.send({"mod":false})
+    res.send({"mod":false,"writer":(allowedToWrite.includes(req.params.user))})
   }
 })
 
@@ -229,7 +260,7 @@ app.get('/delete/:post/', async function(req, res) {
   var tokens = await db.get("tokens")
   if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
       var user = tokens[getCookie('usertoken', req)]
-    if (allowedToWrite.includes(user)) {
+    if (allowedToMod.includes(user)) {
       var posts = await db.get("posts")
       if (posts[req.params.post]) {
         posts[req.params.post] = {"deleted":true}
@@ -271,7 +302,13 @@ res.redirect(`https://auth.itinerary.eu.org/auth/?redirect=${redirectLocation}&n
 app.get('/feed/', async function(req, res) {
   var tokens = await db.get("tokens")
   if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
-              res.render(__dirname + "/html/feed.html", {username:tokens[getCookie('usertoken', req)]})
+    var messages = await db.get("messages")
+    if (messages[tokens[getCookie('usertoken', req)]]) {
+      var messagesForYou = JSON.stringify(messages[tokens[getCookie('usertoken')]])
+    } else {
+      var messagesForYou = "[]"
+    }
+              res.render(__dirname + "/html/feed.html", {username:tokens[getCookie('usertoken', req)], messages:messagesForYou})
   } else {
     res.redirect("https://thedailygobo.scratchtools.app/verify/")
   }
