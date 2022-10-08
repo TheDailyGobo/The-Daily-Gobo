@@ -263,7 +263,7 @@ app.get('/delete/:post/', async function(req, res) {
     if (allowedToMod.includes(user)) {
       var posts = await db.get("posts")
       if (posts[req.params.post]) {
-        posts[req.params.post] = {"deleted":true}
+        posts[req.params.post].deleted = true
         await db.set("posts", posts)
         res.sendStatus(200)
       } else {
