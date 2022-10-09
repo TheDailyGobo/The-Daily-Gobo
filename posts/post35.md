@@ -1,0 +1,1 @@
+Hello there! I have joined the Daily Gobo! Oh yeah btw here is a link to a awesome project: https://scratch.mit.edu/projects/235940157/fullscreen :)

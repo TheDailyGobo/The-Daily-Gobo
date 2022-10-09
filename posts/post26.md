@@ -1,0 +1,1 @@
+In the second comment, made by rgantzos, I didin't understand can you explain me that scratch front pages things?

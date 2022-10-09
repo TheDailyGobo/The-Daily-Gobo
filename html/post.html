@@ -137,11 +137,28 @@
             }
               favoriteCount.textContent = data2.length.toString()
             })
-            var markdownRequest = await fetch(`/posts/post${el}.md`)
+            var markdownRequest = await fetch(`/posts/post${el}/`)
             var markdown = await markdownRequest.text()
             var converter = new showdown.Converter()
             var text = markdown
-            boxContent.querySelector('span').innerHTML = converter.makeHtml(text)
+            var div = document.createElement('div')
+            div.innerHTML = converter.makeHtml(text)
+            const allowedAttributes = ['src', 'href']
+const blacklist = ['script', 'iframe']
+div.querySelectorAll('*').forEach(function(element) {
+    if (element) {
+    if (blacklist.includes(element.nodeName.toLowerCase())) {
+element.remove()
+    } else {
+    element.getAttributeNames().forEach(function(el) {
+    if (!allowedAttributes.includes(el)) {
+        element[el] = null
+    }
+})
+    }
+    }
+})
+            boxContent.querySelector('span').innerHTML = div.innerHTML
             var timestamp = document.createElement('span')
             timestamp.textContent = getFuzzy(data[el].time)
             timestamp.className = 'timestamp'
