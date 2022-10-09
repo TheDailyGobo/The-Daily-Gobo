@@ -1,0 +1,8 @@
+# Customize Your Profile Even Better!
+Scratch profiles are cool, and fun to customize! You can add your About Me, What I'm Working On, Featured Project, and Profile Picture- but you can't really do much more! Here are some cool other ways to customize your profile!
+
+- **Give yourself a status!** You can use websites such as [Ocular](https://ocular.jeffalo.net) and [Aviate](https://aviateapp.eu.org/) to set a status for your profile! It won't show by default, unfortunately, but some people have special apps that allow them to see it displayed on your profile! Ocular even lets you select a color to go along with your status.
+- **Add some stats!** You can take advantage of your featured project to set it to a banner or a page with your stats! Simply set your featured project to an unshared project, and make sure the thumbnail is set to something that looks nice! You can also set the thumbnail to a view of your profile's statistics (followers, views, etc.)!
+- **Nice-looking favorited and followed studios!** You know what else you can do? You can look for aesthetic projects and studios! Usually, they come in groups, and when the thumbnails are placed next to each other, they form a larger image or gif. You can follow studios or favorite projects in a certain order to get this design to display on your own profile!
+
+Well, there are some tips to get your profile looking better than ever! I'll try and post even more some other time!

@@ -1,0 +1,1 @@
+Hi everyone! Make sure to make this blog safe for all person and kids :) no inappropriate post. 

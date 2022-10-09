@@ -4,8 +4,9 @@ async function getBadges(user, element) {
   const badges = {
     "active":"🔥",
     "moderator":"🛡️",
-    "writer":"✍️"
-  
+    "writer":"✍️",
+    "developer":"🧑‍💻",
+    "admin": "👑"
   }
   Object.keys(badges).forEach(function(el) {
     if (data[el]) {

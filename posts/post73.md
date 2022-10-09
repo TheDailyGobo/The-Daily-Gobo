@@ -1,0 +1,1 @@
+The Daily Gobo just had a quick blip, nothing to worry about. The site is online now, we were patching up a security vulnerability. 

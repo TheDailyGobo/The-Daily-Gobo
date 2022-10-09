@@ -249,3 +249,7 @@ a {
 .box-content > h4 > a, .box-content > h4 > text {
   margin-right: 1rem;
 }
+
+.featured {
+  display: none;
+}

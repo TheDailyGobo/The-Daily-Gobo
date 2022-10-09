@@ -6,6 +6,7 @@
     <link href="/css/dark.css" rel="stylesheet" class="darkMode">
     <script src="/js/storage.js"></script>
     <script src="/js/emojiparser.js"></script>
+    <script src="/js/box.js"></script>
   </head>
   <body>
     <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
@@ -25,13 +26,31 @@
     document.querySelector('textarea').addEventListener('input', function() {
       var converter = new showdown.Converter()
             var text = document.querySelector('textarea').value
-            document.querySelector('span.preview').innerHTML = converter.makeHtml(text)
+            var div = document.createElement('div')
+            div.innerHTML = converter.makeHtml(text)
+            const allowedAttributes = ['src', 'href']
+const blacklist = ['script', 'iframe']
+div.querySelectorAll('*').forEach(function(element) {
+    if (element) {
+    if (blacklist.includes(element.nodeName.toLowerCase())) {
+element.remove()
+    } else {
+    element.getAttributeNames().forEach(function(el) {
+    if (!allowedAttributes.includes(el)) {
+        element[el] = null
+    }
+})
+    }
+    }
+})
+            document.querySelector('span.preview').innerHTML = div.innerHTML
     })
     async function logOut() {
       var response = await fetch('/logout/')
       window.location.href = 'https://thedailygobo.scratchtools.app'
     }
     async function post() {
+      if (document.querySelector('textarea').value.length > 50) {
       var response = await fetch("https://thedailygobo.scratchtools.app/newblogpost/", {
   "headers": {
     "accept": "*/*",
@@ -44,6 +63,9 @@
   "credentials": "include"
 });
       window.location.href = 'https://thedailygobo.scratchtools.app/feed/'
+      } else {
+        alert("Wow, thanks for contributing! However...\n\nWe have to follow Scratch community guidelines. To prove that we do, we'd appreciate it if you could write just a little bit more and make sure it's informational!")
+      }
     }
     if (storage.getItem("lightMode")) {
       stylesheet.disabled = true
@@ -59,4 +81,5 @@
       }
     }
   </script>
+  <script src="/js/head-member.js"></script>
 </html>

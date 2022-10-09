@@ -26,6 +26,7 @@
     "linkify-plugin-mention": "^4.0.2",
     "linkifyjs": "^4.0.2",
     "node-fetch": "^3.2.6",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "showdown": "^2.1.0"
   }
 }

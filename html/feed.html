@@ -14,8 +14,16 @@
     <div id="view">
     <div class="box">
 <div class="box-header"><h4>Welcome to Your Feed, <a style="color: #4d97ff;" href="https://scratch.mit.edu/users/<%= username %>/"><%= username %></a>!</h4><h5></h5></div>
-      <div class="box-content"><p>The Daily Gobo is a blog for all things Scratch! You can contribute to the blog, and even favorite blog posts! You can find out all about the current news and so much more!</p></div>
+      <div class="box-content"><p>The Daily Gobo is a blog for all things Scratch! You can contribute to the blog, and even favorite blog posts! You can find out all about the current news and so much more!</p><a href="/dashboard/" style="display: none;" class="writeLink"><button>write a post</button></a></div>
     </div>
+      <div class="box featured">
+<div class="box-header"><h4></h4></div>
+
+        <div class="box-content"></div>
+      </div>
+      <h2>Trending Post</h2>
+    <div class="trending">
+  </div>
       <h2>Posts</h2>
       <div class="posts">
 
@@ -80,7 +88,11 @@
             boxContent.className = 'box-content'
             boxContent.appendChild(document.createElement('span'))
             box.appendChild(boxContent)
+            if (data[el].featured) {
+document.querySelector('.trending').prepend(box)
+            } else {
             document.querySelector('.posts').prepend(box)
+            }
             var btn = document.createElement('button')
             btn.textContent = 'Delete'
             btn.className = 'delete'
@@ -144,11 +156,28 @@
             }
               favoriteCount.textContent = data2.length.toString()
             })
-            var markdownRequest = await fetch(`/posts/post${el}.md`)
+            var markdownRequest = await fetch(`/posts/post${el}/`)
             var markdown = await markdownRequest.text()
             var converter = new showdown.Converter()
             var text = markdown
-            boxContent.querySelector('span').innerHTML = converter.makeHtml(text)
+            var div = document.createElement('html')
+            div.innerHTML = converter.makeHtml(text)
+            const allowedAttributes = ['src', 'href', 'id', 'class']
+const blacklist = ['script', 'iframe']
+div.querySelectorAll('*').forEach(function(element) {
+    if (element) {
+    if (blacklist.includes(element.nodeName.toLowerCase())) {
+element.remove()
+    } else {
+    element.getAttributeNames().forEach(function(el) {
+    if (!allowedAttributes.includes(el.toLowerCase())) {
+        element.remove()
+    }
+})
+    }
+    }
+})
+            boxContent.querySelector('span').innerHTML = div.innerHTML
             var timestamp = document.createElement('span')
             timestamp.textContent = getFuzzy(data[el].time)
             timestamp.className = 'timestamp'

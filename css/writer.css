@@ -1,3 +1,7 @@
 .dashboardLink {
   display: inline-block !important;
 }
+
+.writeLink {
+  display: block !important;
+}
