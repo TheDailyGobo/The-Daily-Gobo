@@ -1,0 +1,1 @@
+Hello this is my first post. I will teach you how to make better games! First, make a thumbnail. Second, don't add an intro if you do scratchers might get impatient for the intro to end! That All, Scratch On

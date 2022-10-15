@@ -1,0 +1,1 @@
+As a fellow curator and blogger of The Daily Gobo, I'm not happy that curators are posting all their projects in The Daily Gobo's Scratch studio. And these aren't even related! So I want you! No, I am not Uncle Sam and don't want you to join the Army but please! No putting unrelated projects in the studio!

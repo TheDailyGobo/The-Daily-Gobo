@@ -8,6 +8,7 @@
     <script src="/js/timestamp.js"></script>
     <script src="/js/badges.js"></script>
     <script src="/js/emojiparser.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
   </head>
   <body>
     <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li style="display: none;" class="dashboardLink"><a href="/dashboard/">Dashboard</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
@@ -55,13 +56,11 @@
     }
     getAllPosts()
     async function getAllPosts() {
-      var response = await fetch('/posts/')
+      var response = await fetch('/postinfo/'+"<%= post %>"+"/")
       var data = await response.json()
-      
-      Object.keys(data).forEach(function(el) {
-        if (el === "<%= post %>") {
-        try {
-          addPost()
+      data = {"1":data}
+      var el = "1"
+      addPost()
           async function addPost() {
             var box = document.createElement('div')
             box.className = 'box'
@@ -138,7 +137,7 @@
             }
               favoriteCount.textContent = data2.length.toString()
             })
-            var markdownRequest = await fetch(`/posts/post${el}/`)
+            var markdownRequest = await fetch(`/posts/post<%= post %>/`)
             var markdown = await markdownRequest.text()
             var converter = new showdown.Converter()
             var text = markdown
@@ -159,16 +158,13 @@ element.remove()
     }
     }
 })
-            boxContent.querySelector('span').innerHTML = div.innerHTML
+            boxContent.querySelector('span').innerHTML = twemoji.parse(div.innerHTML)
             var timestamp = document.createElement('span')
             timestamp.textContent = getFuzzy(data[el].time)
             timestamp.className = 'timestamp'
             boxContent.appendChild(timestamp)
             getBadges(data[el].author, boxHeader.querySelector('h4'))
-          }
-        } catch(err) {}
         }
-      })
     }
   </script>
 </html>

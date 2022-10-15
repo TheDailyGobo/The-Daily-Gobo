@@ -1,0 +1,3 @@
+CHALLENGE / WHY R U DOING CHRISTMAS COMICIALS 
+Hi! Sagi Here !
+So as we neer the end of October it becomes around time for Halloween! On Halloween I challenge anyone who reads this to make there oc to dress up! Now if u don't ecsept you can always ignore it. Anyways  I also noticed that during TNF for the NFL that people are ALREADY doing Christmas commercials.  So please let people do Halloween commercials instead ITS OCTOBER! RAHHHHH

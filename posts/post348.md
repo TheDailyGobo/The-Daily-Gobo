@@ -1,0 +1,1 @@
+A Quick Tutorial On How To Make Words Become Links! Type this in your post! [sample word](sample link) It should look like this! [jjchang1](https://scratch.mit.edu/users/jjchang1/) For pictures right click on your picture and choose open in new tab and copy the link like this! [Gobo!](https://mir-s3-cdn-cf.behance.net/project_modules/disp/82d4fc9158155.560c97ad1f37c.png)

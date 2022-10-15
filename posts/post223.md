@@ -1,0 +1,1 @@
+This is another blog from @soniiccc. Question: how do you get those badges next to your username? Please answer the question on my profile. scratch.mit.edu/users/soniiccc/comments/

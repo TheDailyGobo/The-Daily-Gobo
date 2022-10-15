@@ -1,0 +1,1 @@
+Hi, I'm @GreenGoldAnimator. I'm new to the daily gobo. I hope I can post here often!

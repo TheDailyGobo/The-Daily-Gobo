@@ -1,0 +1,1 @@
+I want to talk about something! You should be able to delete your own post! I am suggesting this and it does not need to be done! Scratch On!

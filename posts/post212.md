@@ -1,0 +1,1 @@
+Hi im just getting on this platform i will be writing more tommorow

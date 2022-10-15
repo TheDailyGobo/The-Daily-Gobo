@@ -1,0 +1,1 @@
+Second post of the day: Very confusing. Scratch team or whoever created scratch had to code a website for people to code on. DUN DUN DUUUUUUUUUUUUUUUUUN

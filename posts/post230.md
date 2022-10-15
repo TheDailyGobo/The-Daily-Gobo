@@ -1,0 +1,1 @@
+Love this post if you think that The Daily Gobo is the best Scratch blog ever- favorite it if you don't!

@@ -1,0 +1,1 @@
+There is a new SDS (Scratch Design Studio), and it's about DOTS!!! To get your project featured, make a project about dots, and send a link to the project in the SDS comment section! Happy Scratching!

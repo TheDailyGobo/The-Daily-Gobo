@@ -1,0 +1,1 @@
+Guess what? I released a project called "What if... Episode 1" yesterday and it already has 7 views, 3 loves, and 2 favorites! :O Here's a link: https://scratch.mit.edu/projects/744284926/   Thanks for reading and have a good day! :D

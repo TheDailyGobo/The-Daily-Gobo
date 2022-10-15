@@ -1,0 +1,1 @@
+I am now part of The Daily Gobo and I will be posting music, games, and coding tutorials. I have 64 followers so help me out and make the blue button grey/gray. Contest https://scratch.mit.edu/projects/736778404/ , top 3 will get a shout out on my next post.

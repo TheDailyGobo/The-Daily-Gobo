@@ -1,0 +1,1 @@
+Hi guys! So, I'm making this series called "Shards of darkness" And I need auditions. So far the characters you can choose from are Minty and Flame. Go ahead- GIVE ME YOUR VOICE (I'm ursula not rly do) https://scratch.mit.edu/projects/743485782

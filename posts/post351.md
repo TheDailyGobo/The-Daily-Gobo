@@ -1,0 +1,1 @@
+Platformers are all over scratch and are a very popular scratch trend! Platformers are games with simple WASD controls. The games usually have levels and hazards. Want to play platformers? Play platformers [here](https://scratch.mit.edu/studios/31385590/)

@@ -1,0 +1,1 @@
+I'm going to start doing shout-outs!!!!!!!!!!! Just go to my profile and follow me and say #DailyGobo

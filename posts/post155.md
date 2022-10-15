@@ -1,0 +1,1 @@
+Hello guys, this is my first post of "The Daily Gobo". In this blog i am going to be talking about some jobs I need people to do. 1. Artist. 2. Composer (Me and someone else so comment on my profile if you want to be one) 3. Coder. 

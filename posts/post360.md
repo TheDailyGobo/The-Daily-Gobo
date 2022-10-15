@@ -1,0 +1,1 @@
+*Smashes keyboard* aijadhikfdjdakghfsgjedkldagridlfgjlkjnsfjdghtoildjykfgdhtiodlsykjfgtydiuyopdifkgjdhthroiyujkfgklhoditgkflhjtrlihkjtiolykhhfskiuotrighfjhksafgiurjgfduiwteriutytiurywiutyrnhntepwrktuowirute (Sorry this is for a test I'm making for a design and to know how a warning looks and what the deleted post message is) 

@@ -1,0 +1,1 @@
+Have you heard of the new OS called Creations OS™? Well it is a WIP(work in progress) OS with little workers and needs help, if you want to help go here: https://scratch.mit.edu/discuss/topic/627042/?page=1#post-  Also you can give ideas. Features: sign in, games, shop, music app, changeable backgrounds. That is it for this post, next post will have a shout out.

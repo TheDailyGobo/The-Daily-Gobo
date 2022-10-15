@@ -1,0 +1,2 @@
+I want to talk about how to add images to your post. 1. Find an image! 2. Hold image down and click open in new window! Then, copy the image link!
+Lastly, type this in your post ![](sample link) and it should look like this! ![](https://en.scratch-wiki.info/w/images/thumb/ScratchCat-Small.png/200px-ScratchCat-Small.png)

@@ -1,0 +1,1 @@
+Hello everyone. I'm make baldi content and I really really love scratch. Sometimes I do other things like scratch cat becomes time or Scratch cat become's different colours. I just saw this website and the studio. I might be making a lot of blogs. See you later :)

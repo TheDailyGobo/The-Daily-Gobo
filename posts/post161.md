@@ -1,0 +1,1 @@
+Hello. This is my second post of the day. THIS ONE IS SERIOUS!!!!!!!!! Animal abuse is a bad thing. They have done nothing wrong! Remix this and sigin if you are against animal abuse: https://scratch.mit.edu/projects/743465156

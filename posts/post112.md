@@ -1,0 +1,1 @@
+Has anyone else noticed this? On the scratch explore page youd expect to find griffpatchs projects however far less loved and favourited projects are on #1. If anyone knows the system please let me know as it really confuses me.

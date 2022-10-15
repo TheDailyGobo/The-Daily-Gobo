@@ -1,0 +1,1 @@
+Ok guys. the doki clicker game is getting a new update for halloween! Im not trying to advertise, im just saying it. Plus it kinda relates to a topic because doki clicker is getting very popular and getting into the trending phase. I'm not adding a link because thats advertising, but if it sounds intresting to you and you want to play it, look up doki clicker on scratch.

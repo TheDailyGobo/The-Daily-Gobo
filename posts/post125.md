@@ -1,0 +1,2 @@
+I have 223 followers now, my 200 follower contest is going! If you want to join, you better know what outros are! If you don't know what they are, go ahead and ask me in the comments so I can tell you what they are! A outro is something someone uses to end a project, I don't use them much, but the winning outro will be used in my next cartoon or whatever :)
+Here is a link to the contest: https://scratch.mit.edu/projects/725633946/  Thank you so much!

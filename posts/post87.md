@@ -1,0 +1,1 @@
+Hi!! I  -Alpxon- (you already know that tho). I'm learning python..a bit

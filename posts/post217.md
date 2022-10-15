@@ -1,0 +1,1 @@
+Update idea for TDG (The Daily Gobo)! I know the developers of this site are planning on it, but wouldn't it be so cool to have profiles! We could have about mes and maybe even pfps! I hope that does end up happening! Well, thats it for the post! Peater out!

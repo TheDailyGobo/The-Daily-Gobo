@@ -1,0 +1,1 @@
+So, what do the different badges mean? If you know, comment on my chat: https://scratch.mit.edu/studios/30893777/comments

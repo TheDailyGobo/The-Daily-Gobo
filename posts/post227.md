@@ -1,0 +1,1 @@
+Does anyone know how to add pictures to a post here? If you know, comment on my profile in Scratch. I also want to know how to make those letters blue so you can make a link to somewhere. Thank you so much! :D

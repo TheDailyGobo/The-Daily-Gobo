@@ -1,0 +1,1 @@
+ok so scratch shoud add a block that says *atuo animate* it would be soooo easy to animate!

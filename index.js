@@ -3,10 +3,24 @@ const Database = require("@replit/database")
 const db = new Database()
 //const allowedToWrite = ['NFlex23', 'rgantzos', 'MaterArc', 'AugieDoggie2011', 'jboys846', 'relativity-', '2022dev19', 'TheAnvils','UnofficialSDS','Virtual-Insanity','kittiemasters', 'popjam12', 'WhatijStudios', 'BendyOl183', 'Blueper_Scratch', 'kawaiinessdog', 'elip100', 'coolcreator200_alt', 'ST36_Programmer', 'BlixerEvolution', 'sinktheshot', 'Taurus7d', 'Marie_Chibi', ' IloveSpeedy6', '-lxvelydaises-', '-FunnyToons-', 'ZeldaFan_78', 'diethon', 'RoseReef', 'ZeldaFan_78']
 //const allowedToMod = ['rgantzos', 'MaterArc', 'TheAnvils', 'kittiemasters', 'AugieDoggie2011', 'WhatijStudios','-FunnyToons-', 'jask82006', 'RoseReef']
-const headMembers = ['MaterArc', 'rgantzos','-RabbitWorld-']
-const developers = ['rgantzos', 'MaterArc']
-const banned = ['jaxon_baxon']
+const headMembers = ['MaterArc', 'rgantzos','-RabbitWorld-', 'popjam12']
+const developers = ['rgantzos', 'MaterArc', 'TheAnvils', 'applejuiceproduc']
+const banned = ['']
 const postsPerWeekForActive = 3
+
+async function addMoreLikes() {
+  var posts = await db.get("posts")
+  posts["271"].loves = ['NFlex23', 'rgantzos', 'MaterArc', 'AugieDoggie2011', 'jboys846', 'relativity-', '2022dev19', 'TheAnvils','UnofficialSDS','Virtual-Insanity','kittiemasters', 'popjam12', 'WhatijStudios', 'BendyOl183', 'Blueper_Scratch', 'kawaiinessdog', 'elip100', 'coolcreator200_alt', 'ST36_Programmer', 'BlixerEvolution', 'sinktheshot', 'Taurus7d', 'Marie_Chibi', ' IloveSpeedy6', '-lxvelydaises-', '-FunnyToons-', 'ZeldaFan_78', 'diethon', 'RoseReef', 'ZeldaFan_78']
+  posts["271"].favorites = ['NFlex23', 'rgantzos', 'MaterArc', 'AugieDoggie2011', 'jboys846', 'relativity-', '2022dev19', 'TheAnvils','UnofficialSDS','Virtual-Insanity','kittiemasters', 'popjam12', 'WhatijStudios', 'BendyOl183', 'Blueper_Scratch', 'kawaiinessdog', 'elip100', 'coolcreator200_alt', 'ST36_Programmer', 'BlixerEvolution', 'sinktheshot', 'Taurus7d', 'Marie_Chibi', ' IloveSpeedy6', '-lxvelydaises-', '-FunnyToons-', 'ZeldaFan_78', 'diethon', 'RoseReef', 'ZeldaFan_78']
+  await db.set("posts", posts)
+}
+//addMoreLikes()
+
+async function testMessages() {
+  var messages = await db.get("messages")
+  console.log(messages)
+}
+testMessages()
 
 async function banTheBanned() {
   var tokens = await db.get("tokens")
@@ -25,7 +39,8 @@ const fs = require("fs");
 
 // discord webhook
 const { WebhookClient, EmbedBuilder } = require('discord.js')
-const client = new WebhookClient({url:"https://discord.com/api/webhooks/1028030025246703726/uZUvifQVy6xDXLaOkkirhIgJrMecYpOkJXHAly_2LgOSWvIZrPJM_y_7aR1wg05UIRC3"})
+const client = new WebhookClient({url:process.env.webhook})
+const deletePostClient = new WebhookClient({url:process.env.deletePost})
 
 
 // keeping online
@@ -47,6 +62,34 @@ function makeid(length) {
  charactersLength));
    }
    return result;
+}
+
+function getUserData(username, posts, allowedToWrite, allowedToMod) {
+      var postsThisWeek = 0
+      var totalLoves = 0
+      var totalFavorites = 0
+      var totalPosts = 0
+      Object.keys(posts).forEach(function(el) {
+        if (posts[el].author === username) {
+          if (!posts[el].deleted) {
+            totalPosts = totalPosts+1
+            totalLoves = totalLoves+posts[el].loves.length
+            totalFavorites = totalFavorites+posts[el].favorites.length
+      var then = new Date(posts[el].time);
+var now = new Date();
+
+var msBetweenDates = Math.abs(then.getTime() - now.getTime());
+
+// 👇️ convert ms to days                 hour   min  sec   ms
+var daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000);
+
+if (daysBetweenDates < 7) {
+  postsThisWeek = postsThisWeek+1
+}
+        }
+        }
+    })
+      return {"username":username,"writer":(allowedToWrite.includes(username)),"moderator":(allowedToMod.includes(username)),"active":(postsThisWeek > (postsPerWeekForActive-1)),"developer":(developers.includes(username)),"admin":(headMembers.includes(username)),"stats":{"loves":totalLoves,"favorites":totalFavorites,"posts":totalPosts}}
 }
 
 async function getFeatured() {
@@ -84,10 +127,12 @@ async function writePost(post, author) {
   var writeStream = fs.createWriteStream("posts/post"+postId+".md");
   writeStream.write(post);
   writeStream.end();
+  var str = post
+  if(str.length > 10) str = str.substring(0,4096);
   var embed = new EmbedBuilder()
   .setTitle(`New post by ${author}`)
   .setColor('Random')
-  .setDescription(post)
+  .setDescription(str)
   .setTimestamp()
   var response = await fetch('https://trampoline.turbowarp.org/proxy/users/'+author)
   var data = await response.json()
@@ -138,6 +183,37 @@ function parseCookies(request) {
 }
 app = express();
 const PORT = 3000;
+
+app.get('/messages/', async function(req, res) {
+  var tokens = await db.get("tokens")
+  if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
+    var user = tokens[getCookie('usertoken', req)]
+    var messages = await db.get("messages")
+    if (messages[user]) {
+      res.send(messages[user])
+    } else {
+      res.send([])
+    }
+  }
+})
+
+app.get('/writers/', async function(req, res) {
+  var writers = await db.get("allowedToWrite")
+  res.send(writers)
+})
+
+app.get('/clear/', async function(req, res) {
+  var tokens = await db.get("tokens")
+  if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
+    var user = tokens[getCookie('usertoken', req)]
+    var messages = await db.get("messages")
+    if (messages[user]) {
+      messages[user] = []
+      await db.set("messages", messages)
+      res.sendStatus(200)
+    }
+  }
+})
 
 app.get('/js/head-member.js', async function(req, res) {
   var tokens = await db.get("tokens")
@@ -395,6 +471,35 @@ app.get('/users/', async function(req, res) {
   }
 })
 
+app.post('/warn/', jsonParser, async function(req, res) {
+  const messages = await db.get("messages")
+  var tokens = await db.get("tokens")
+  if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
+      var user = tokens[getCookie('usertoken', req)]
+    if (headMembers.includes(user)) {
+      if (req.body.user && req.body.warning) {
+        var response = await fetch('https://trampoline.turbowarp.org/proxy/users/'+req.body.user)
+        var data = await response.json()
+        if (data.username) {
+          var username = data.username
+          if (messages[username]) {
+        messages[username].push(`New admin message: `+req.body.warning)
+          } else {
+            messages[username] = [`New admin message: `+req.body.warning]
+          }
+        await db.set("messages", messages)
+        res.sendStatus(200)
+        deletePostClient.send({
+    content: `@${user} just warned @${username}: `+"`"+req.body.warning+"`",
+	username: 'The Daily Gobo',
+	avatarURL: 'https://cdn.discordapp.com/icons/1026288031537303563/a1e8c8448b80ea612a13dd238e4609a4.webp?size=240'
+});
+        }
+      }
+    }
+  }
+})
+
 app.post('/newblogpost/', jsonParser, async function(req, res) {
   const allowedToWrite = await db.get("allowedToWrite")
   var tokens = await db.get("tokens")
@@ -454,6 +559,20 @@ app.get('/delete/:post/', async function(req, res) {
       var posts = await db.get("posts")
       if (posts[req.params.post]) {
         posts[req.params.post].deleted = user
+
+        var embed = new EmbedBuilder()
+  .setTitle(`Post Deleted by ${user}`)
+  .setColor('Random')
+  .setTimestamp()
+  var response = await fetch('https://trampoline.turbowarp.org/proxy/users/'+user)
+  var data = await response.json()
+  embed.setAuthor({name:user, iconURL:data.profile.images['90x90'], url:"https://scratch.mit.edu/users/"+user+"/"})
+  deletePostClient.send({
+    content: `@${user} just deleted post #${req.params.post} by @${posts[req.params.post].author}.`,
+	username: 'The Daily Gobo',
+	avatarURL: 'https://cdn.discordapp.com/icons/1026288031537303563/a1e8c8448b80ea612a13dd238e4609a4.webp?size=240',
+	embeds: [embed],
+});
         await db.set("posts", posts)
         res.sendStatus(200)
       } else {
@@ -493,15 +612,18 @@ res.redirect(`https://auth.itinerary.eu.org/auth/?redirect=${redirectLocation}&n
 app.get('/feed/', async function(req, res) {
   var tokens = await db.get("tokens")
   if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
-    var messages = await db.get("messages")
-    if (messages[tokens[getCookie('usertoken', req)]]) {
-      var messagesForYou = JSON.stringify(messages[tokens[getCookie('usertoken')]])
-    } else {
-      var messagesForYou = "[]"
-    }
-              res.render(__dirname + "/html/feed.html", {username:tokens[getCookie('usertoken', req)], messages:messagesForYou})
+              res.render(__dirname + "/html/feed.html", {username:tokens[getCookie('usertoken', req)]})
   } else {
     res.redirect("https://thedailygobo.scratchtools.app/verify/")
+  }
+})
+
+app.get('/postinfo/:post/', async function(req, res) {
+  var posts = await db.get("posts")
+  if (posts[req.params.post]) {
+  res.send(posts[req.params.post])
+  } else {
+    res.sendStatus(404)
   }
 })
 
@@ -510,23 +632,50 @@ app.get('/posts/:post/', async function(req, res) {
   var converter = new showdown.Converter()
     var text = data.toString('utf8')
   var html = converter.makeHtml(text)
-          html = DOMPurify.sanitize(html, {ALLOWED_TAGS: ['b', 'q', 'a', 'i', 'ul', 'li', 'img', 'ol', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'], ALLOWED_ATTR: ['src', 'href']})
+          html = DOMPurify.sanitize(html, {ALLOWED_TAGS: ['b', 'q', 'a', 'i', 'ul', 'li', 'img', 'ol', 'span', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'hr', 'br', 'u'], ALLOWED_ATTR: ['src', 'href']})
   res.send(html)
   })
 })
 
 app.get('/posts/', async function(req, res) {
+  if (req.query.offset && !isNaN(req.query.offset)) {
+  const allowedToWrite = await db.get("allowedToWrite")
+  const allowedToMod = await db.get("allowedToMod")
   var featured = await getFeatured()
   var posts = await db.get("posts")
-  Object.keys(posts).forEach(function(el) {
-    if (el === featured.id) {
-      posts[el].featured = true
+  var newPosts = {}
+  var trendingPost = {"loves":[],"favorites":[]}
+  var trendingPostId = "-1"
+  Object.keys(posts).forEach(function(el, i) {
+    if ((Object.keys(posts).length-i) > Number(req.query.offset)-1 && (Object.keys(posts).length-i) < Number(req.query.offset)+50) {
+    if (!posts[el].deleted) {
+      var then = new Date(posts[el].time);
+var now = new Date();
+
+var msBetweenDates = Math.abs(then.getTime() - now.getTime());
+
+// 👇️ convert ms to days                 hour   min  sec   ms
+var daysBetweenDates = msBetweenDates / (24 * 60 * 60 * 1000);
+
+if (daysBetweenDates < 1) {
+
+      if ((posts[el].loves.length+(posts[el].favorites.length*2)) > (trendingPost.loves.length+(trendingPost.favorites.length*2))) {
+        trendingPost = posts[el]
+        trendingPostId = el
+      }
+}
+      posts[el].author = getUserData(posts[el].author, posts, allowedToWrite, allowedToMod)
+      newPosts[el] = posts[el]
     }
-    if (posts[el].deleted) {
-      delete posts[el]
-    }
+          }
   })
-  res.send(posts)
+  if (newPosts[trendingPostId]) {
+  newPosts[trendingPostId].featured = true
+  }
+  res.send(newPosts)
+  } else {
+    res.sendStatus(400)
+  }
 })
 
 app.get('/verified', async function(req, res) {
@@ -550,7 +699,7 @@ app.get('/verified', async function(req, res) {
           res.cookie('usertoken',token, { maxAge: 999999999900000, httpOnly: true });
           res.redirect("https://thedailygobo.scratchtools.app/feed/")
           } else {
-            res.send("oop you're banned")
+            res.send("oops you're banned")
           }
         } else {
             // Respond to the client with an error

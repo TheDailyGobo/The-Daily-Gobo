@@ -1,0 +1,2 @@
+Hey, scratchers! It's me Peater! I would like to announce that tomorrow I might not be active on The Daily Gobo that much. This is because I have school from 8:15 to 2:45 and that means I won't be able to do stuff on this blog between those two times. I'm sorry but I can't control my school. I will be active when I get home though! 
+     -Peater

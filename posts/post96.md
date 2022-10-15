@@ -1,0 +1,1 @@
+Oh heeey! So, I saw what Virtual Insanity said about commenting on others blogs, and I loved that idea! I would suggest that too. And to keep it kind, there could also be a report button? Thanks for reading! Byyyye!

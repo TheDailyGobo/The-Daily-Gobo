@@ -1,0 +1,2 @@
+                                            GLITCHMAGGEDON AYS COMING SOON!!!!                                                                   
+terrariamodboi made an announcement about his AYS (add yourself singing) project of final escape. he used RaD engine (by @RaDdUD34) to make it. I tried my hand at RaD engine and I am currently making an AYS of Glitchmaggedon from FNF: Glitched Legends. It's not out yet but I will release it shortly! I hope you guys like it!

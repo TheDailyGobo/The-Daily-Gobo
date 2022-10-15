@@ -1,0 +1,1 @@
+first post here! also maybe check out my icon maker, I worked hard on it and I'm open to add new things! https://scratch.mit.edu/projects/713703119/ (And my extended bio, cause the about me is too short ecks dee https://scratch.mit.edu/studios/32153073/)

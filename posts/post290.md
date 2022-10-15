@@ -1,0 +1,1 @@
+Hello my dudes, I’ll be posting tutorials on how to make a basic scratch game every Saturday.

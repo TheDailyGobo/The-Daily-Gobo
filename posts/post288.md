@@ -1,0 +1,2 @@
+For the studio
+*NOTICE* Hello, I am popjam12, an admin of the daily gobo. Please do NOT add projects to this studio *WITHOUT ASKING*. We have to delete them you know, and today I discovered there was OVER 100. Anyone who is adding projects *WITHOUT ASKING* may get a warning.

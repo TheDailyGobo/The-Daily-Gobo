@@ -1,0 +1,1 @@
+Ideas: Why not add a search bar on the top-bar where you can search other's posts? <input type="text" placeholder="Search a Blog">

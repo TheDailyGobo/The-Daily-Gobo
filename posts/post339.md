@@ -1,0 +1,2 @@
+Let's congratulate [@CauchySheep](https://scratch.mit.edu/users/CauchySheep/) for getting their project [3D shadow](https://scratch.mit.edu/projects/735550406/) featured! A tip to get popular, always be active on Scratch! Scratch On!  
+      -[@jjchang1](https://scratch.mit.edu/users/jjchang1/)

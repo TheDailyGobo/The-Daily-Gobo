@@ -1,0 +1,1 @@
+Heyy everyone! Do you think if there is dark mode here, then shouldn't it be on scratch as well? There has been a discussion about it for over 6 years, and either Scratch Team is busy, or they are ignoring the discussion. What do you guys think?

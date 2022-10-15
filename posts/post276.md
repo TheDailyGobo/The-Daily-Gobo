@@ -1,0 +1,1 @@
+Hello  I Want You Guys To Know About Scratch Cat The Official Mascot Of Scratch. Scratch Was Created In May Of 2007.  Scratch Cat Is A Very Good Mascot![S](https://en.scratch-wiki.info/w/images/thumb/ScratchCat-Small.png/200px-ScratchCat-Small.png)Scratch On!

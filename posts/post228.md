@@ -1,0 +1,1 @@
+(Sorry for posting too much.) From now on, if you want to reply to my posts, please do it on my profile, unless my profile is closed.

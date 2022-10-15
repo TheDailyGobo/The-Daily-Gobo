@@ -1,0 +1,2 @@
+# Official Announcement:
+We now have a "load more" button that will appear at the bottom of the screen once you reach the last post on the page. This will help so that one page does not contain over 300+ posts and it will help to keep the posts organized! Thanks to [rgantzos](https://scratch.mit.edu/users/rgantzos/) , as always for coding this wonderful feature! We have more updates planned for the site 

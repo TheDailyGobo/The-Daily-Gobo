@@ -1,0 +1,2 @@
+<h3> Try to keep the posts over 3 sentences </>                                                                                                                      
+<h4> As MasterArc said, this is a blogging website, which means that posts should be more than 3-4 sentences long. I've seen alot of posts not really about anything, remember to stay on-topic as well

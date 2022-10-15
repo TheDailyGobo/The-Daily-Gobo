@@ -1,0 +1,3 @@
+Scratch 
+
+There are a lot of cool things you can do on Scratch! My personal favorite is to chat on studios. (I am very social) But there are many other cool things as well! You can code fun games, meet fun people and more. If you need inspiration on what to make, check out a few of these amazing Scratchers and their amazing games/projects: @griffpatch @MaterArc @ceebee @rgantzos Those are just a few of many amazing Scratchers. So, go make a game!

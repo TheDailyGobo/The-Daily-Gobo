@@ -1,0 +1,1 @@
+Wow it is almost scratchtober and I can't wait! I am so excited to do my second scratch event! I hope that the theme of the event is really easy.  Let's hope for the best scratchtober ever!

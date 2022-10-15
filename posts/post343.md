@@ -1,0 +1,2 @@
+Let's take a moment to congratulate [@PrehistoricWaffle](https://scratch.mit.edu/users/PrehistoricWaffle/) for getting their project [100% Pen Mirror Trail Effect #Art #All #Music](https://scratch.mit.edu/projects/724881947/) featured! I absolutely love the mirror effect and that you can change it! It is very addicting and satisfying! That's All For Now! Scratch On!       
+                                                                                 -[@jjchang1](https://scratch.mit.edu/users/jjchang1/)

@@ -1,0 +1,1 @@
+Hi! I'm Serious-Cirrus! I like Kirby and Deltarune. If you need any help with some Kirby lore I will be your best bet!!! I will Serious-Cirrusly see ya later!!!

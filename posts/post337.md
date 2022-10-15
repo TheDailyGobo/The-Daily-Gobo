@@ -1,0 +1,1 @@
+I want to talk about my posting schedule! I usually post everyday! I also want to congratulate [@cheekybubba5](https://scratch.mit.edu/users/cheekybubba5/) for getting their project [4 Dot Frenzy!](https://scratch.mit.edu/projects/733586052/) featured! I got 2 posts in 1! Scratch On!   -[@jjchang1](https://scratch.mit.edu/users/jjchang1/)

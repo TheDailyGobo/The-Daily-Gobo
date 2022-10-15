@@ -1,0 +1,1 @@
+SUGGESTION: THEMES! So, maybe on the daily gobo, when you go to write a blog, you could select a theme for your blog! Some theme ideas i have are Tutorials, Scratch Events, Suggestions, Hacks/Hacked Blocks, Trending Topics, and Other!

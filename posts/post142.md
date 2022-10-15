@@ -1,0 +1,1 @@
+question: what if the scratch forums got a new "things i'm writing" for writing threads? would this be good or bad? heart for good, star for bad, both for somewhat in the middle/undecided

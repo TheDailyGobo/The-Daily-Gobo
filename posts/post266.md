@@ -1,0 +1,2 @@
+What is the Backpack tool? And what does it do? 
+If you find yourself asking these questions look no further! The Backpack tool in Scratch is a tool that allows you to transport, code, sound, sprites, and costumes from one project to another! Just click and drag whatever you want into the backpack tool, go to another project and drag it where you want it! However, if you're using the backpack to borrow things from someone else's project, make sure they're okay with it and make sure to give the proper credit! ~JS_Future1

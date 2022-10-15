@@ -1,0 +1,1 @@
+Do you think scratchers should have the ability to change their usernames? I don't know how I would feel about that, but that's just me! Do you think scratchers should be able to change their usernames? Favorite this post for yes, and heart it for no. Do both if you are meh with it like me!

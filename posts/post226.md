@@ -1,0 +1,2 @@
+I look forward to working with you from now on! Quick suggestion: it would be good to have some art tutorials and ideas in Scratch. Because even if you want to start art, it is easy to get frustrated with art. (I'm struggling with it too. XD).
+So, if you do that, it will create some very good art in Scratch and make the Scratch Design Studio community more lively!

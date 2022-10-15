@@ -1,0 +1,1 @@
+I am jjchang1 and I am 9 years old. I love coding and I believe Scratch is great for block coding! I am looking for people to join my [community studio](https://scratch.mit.edu/studios/32140150)! Here is my [scratch profile](https://scratch.mit.edu/users/jjchang1/)!

@@ -1,0 +1,1 @@
+I am sorry i have to do this, but when you search up "doki clicker" on scratch it doesnt work, so if you want to play the game, i need to send a link. Dont call this advertising cuz i dont want everyone to play the game, but if it sounds fun, here it is: https://scratch.mit.edu/projects/737131864/

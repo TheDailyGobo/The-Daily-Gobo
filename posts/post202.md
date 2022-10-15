@@ -1,0 +1,1 @@
+My suggestion for a Scratch block: Width and height blocks. Where are they?

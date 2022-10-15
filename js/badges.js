@@ -1,6 +1,5 @@
-async function getBadges(user, element) {
-  var response = await fetch('/users/'+user+'/')
-  var data = await response.json()
+function getBadges(user, element) {
+  var data = user
   const badges = {
     "active":"🔥",
     "moderator":"🛡️",
@@ -14,7 +13,7 @@ async function getBadges(user, element) {
     span.className = 'badge'
     span.dataset.badgeType = el
       span.textContent = badges[el]
-      element.appendChild(span)
+      element.appendChild(twemoji.parse(span))
     }
   })
 }

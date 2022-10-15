@@ -1,0 +1,1 @@
+This is something in warrior cats that doesn't make ANY sense. Medicine cats pledge to stay out of clan rivalry, and you know what they learn besides herbs and starclan? FIGHTING TECHNIQUES. Like- what??!?!

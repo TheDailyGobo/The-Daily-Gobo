@@ -1,0 +1,1 @@
+Scratch should make a new Scratch block that allows sounds to be played at any starting point. Sort of like a code block that says: start sound [sound] at point (blank), so that you can connect the end to a variable. Another feature should be sound merge. 

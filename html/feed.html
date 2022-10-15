@@ -8,6 +8,7 @@
     <script src="/js/timestamp.js"></script>
     <script src="/js/badges.js"></script>
     <script src="/js/emojiparser.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
   </head>
   <body>
     <div id="navigation"><ul class="nav"><li class="logo"><a arial-label="Scratch" href="/"></a></li><li><a href="/">The Daily Gobo</a></li><li class="right"><a onclick="logOut()" style="cursor: pointer;">Log Out</a></li><li style="display: none;" class="dashboardLink"><a href="/dashboard/">Dashboard</a></li><li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li></ul></div>
@@ -28,10 +29,37 @@
       <div class="posts">
 
       </div>
+      <button class="loadMore button" onclick="getAllPosts()">Load More Posts</button>
     </div>
   </body>
   <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
   <script>
+    async function getMessages() {
+      var response = await fetch('/messages/')
+      var data = await response.json()
+    data.forEach(function(el) {
+      var div = document.createElement('div')
+      div.className = 'admin-message'
+      var p = document.createElement('p')
+      var button = document.createElement('button')
+      button.className = 'button mod-admin-message-dismiss'
+      var img = document.createElement('img')
+      img.src = 'https://scratch.mit.edu/svgs/modal/close-x.svg'
+      img.className = 'admin-message-icon'
+      button.appendChild(img)
+      div.appendChild(button)
+      button.addEventListener('click', async function() {
+        if (confirm("Are you sure you want to close ALL admin messages?")) {
+          var response = await fetch('/clear/')
+          window.location.href = window.location.href
+        }
+      })
+      p.innerHTML = el
+      div.appendChild(p)
+      document.querySelector('#view').prepend(div)
+    })
+    }
+    getMessages()
     if (storage.getItem("lightMode")) {
       stylesheet.disabled = true
     }
@@ -66,10 +94,14 @@
       var response = await fetch('/logout/')
       window.location.href = 'https://thedailygobo.scratchtools.app'
     }
+    var offset = 0
     getAllPosts()
     async function getAllPosts() {
-      var response = await fetch('/posts/')
+      var response = await fetch('/posts/?offset='+offset)
       var data = await response.json()
+      offset = offset+50
+      var postsBox = document.createElement('div')
+      document.querySelector('.posts').appendChild(postsBox)
       Object.keys(data).forEach(function(el) {
         try {
           addPost()
@@ -81,7 +113,7 @@
             boxHeader.appendChild(document.createElement('h4'))
             var a = document.createElement('a')
             a.href = '/post/'+el+'/'
-            a.textContent = `Blog post by ${data[el].author}`
+            a.textContent = `Blog post by ${data[el].author.username}`
             boxHeader.querySelector('h4').appendChild(a)
             box.appendChild(boxHeader)
             var boxContent = document.createElement('div')
@@ -91,7 +123,7 @@
             if (data[el].featured) {
 document.querySelector('.trending').prepend(box)
             } else {
-            document.querySelector('.posts').prepend(box)
+            postsBox.prepend(box)
             }
             var btn = document.createElement('button')
             btn.textContent = 'Delete'
@@ -177,7 +209,7 @@ element.remove()
     }
     }
 })
-            boxContent.querySelector('span').innerHTML = div.innerHTML
+            boxContent.querySelector('span').innerHTML = twemoji.parse(div.innerHTML)
             var timestamp = document.createElement('span')
             timestamp.textContent = getFuzzy(data[el].time)
             timestamp.className = 'timestamp'

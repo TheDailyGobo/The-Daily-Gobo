@@ -253,3 +253,39 @@ a {
 .featured {
   display: none;
 }
+
+img.emoji {
+  height: 1rem;
+  position: relative;
+  top: 0.1rem;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
+}
+
+.admin-message {
+text-align: left;
+  margin: 1rem;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 5px;
+    /*background-color: rgba(77,151,255,.25);*/
+  background-color: #ff9f0025;
+    padding: 1rem;
+width: 57rem;
+  display: inline-block;
+}
+
+.button.mod-admin-message-dismiss {
+      box-shadow: none;
+    padding: 0.25rem;
+    line-height: .8rem;
+      height: 1.75rem;
+  float: right;
+}
+
+.admin-message-icon {
+    vertical-align: middle;
+}
+
+.box-content * {
+  white-space: pre-wrap;
+}

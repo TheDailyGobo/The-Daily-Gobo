@@ -1,0 +1,1 @@
+ello people. i am still at school and my friends are being extremely annoying. PLS GIMME ADVICE

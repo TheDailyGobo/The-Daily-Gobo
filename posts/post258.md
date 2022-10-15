@@ -1,0 +1,1 @@
+does saying the scratch guidelines delete itself????? because I did that and that happened idk tho

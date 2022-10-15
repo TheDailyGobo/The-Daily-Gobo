@@ -51,13 +51,15 @@ element.remove()
     }
     async function post() {
       if (document.querySelector('textarea').value.length > 50) {
+        var content = document.querySelector('textarea').value
+        document.querySelector('textarea').value = ''
       var response = await fetch("https://thedailygobo.scratchtools.app/newblogpost/", {
   "headers": {
     "accept": "*/*",
     "content-type": "application/json",
   },
   "referrerPolicy": "origin",
-  "body": JSON.stringify({'content':document.querySelector('textarea').value}),
+  "body": JSON.stringify({'content':content}),
   "method": "POST",
   "mode": "cors",
   "credentials": "include"

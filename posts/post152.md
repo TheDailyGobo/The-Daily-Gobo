@@ -1,0 +1,1 @@
+Woo-hoo! I can't say this enough: Thanks to all of your support in helping us grow The Daily Gobo! We have officially reached 150 posts on the site :) Me and rgantzos really appreciate all of the feedback, bug reports, and general help we received from the community. We would not be here without each and every one of you! 

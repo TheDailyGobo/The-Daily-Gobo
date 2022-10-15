@@ -1,0 +1,2 @@
+Recently, I have seen a lot of curators of the daily gobo adding unrelated projects! Please don't add unrelated projects!
+They will be deleted anways and it takes time for the managers to delete them! Scratch On!

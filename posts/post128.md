@@ -1,0 +1,1 @@
+Hello hoomans! New writer of the Daily Gobo here! I IS ENVY OF ALL CATS!!!! I will be posting daily about the stuff I'm doing, like I'm supposed to. (Literally, it's in the title!) XD Okay, so I'm also cringe. BUT IT'S WORTH IT!!!!! Here's the link to my latest project! https://scratch.mit.edu/projects/743250384 only warrior cats fans will understand this, FYI.

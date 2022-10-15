@@ -1,0 +1,1 @@
+<h3> So I accidentally was viewing the Scratchtober 2021 project! I'm not smort. Can mods delete that? </h3>

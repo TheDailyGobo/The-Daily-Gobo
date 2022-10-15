@@ -1,0 +1,2 @@
+I want to talk about how to get the scratcher status. 1. Publish several projects. 2. Like and favorite projects. 3. Comment helpful things on other projects. 4. It usually will take about 2 weeks to get a request to become a scratcher.
+     Thats All, Scratch On!

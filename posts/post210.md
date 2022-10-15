@@ -1,0 +1,1 @@
+Scratch should make a turkey sprite for thanksgiving because we dont have one

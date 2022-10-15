@@ -1,0 +1,1 @@
+Never mind I'm so incredibly dumb- :( Why. I wasn't reading MaterArc's name correctly and the badges were not appearing for me, sorry everyone D:
