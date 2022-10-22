@@ -12,7 +12,8 @@
   color: white;
 }
 
-.box-content, .box-header {
+.box-content,
+.box-header {
   background-color: #323648;
   color: white !important;
   border: 1px solid #393d60;
