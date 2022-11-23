@@ -301,4 +301,5 @@ img.emoji {
   align-items: center;
   text-align: center;
   min-hight: 100vh;
+  /* font-size: 50px; was removced*/
 }
