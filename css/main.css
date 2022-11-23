@@ -293,3 +293,12 @@ img.emoji {
 .box-content * {
   white-space: pre-wrap;
 }
+
+.centered_div {
+  display: flex;
+  flex-diriction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-hight: 100vh;
+}
