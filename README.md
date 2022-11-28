@@ -3,4 +3,4 @@ Welcome to The Daily Gobo, the best blog for Scratch around! We have many writer
 
 We use ScratchAuth for our site, so that users can verify their identities with their Scratch accounts. They can then view, love, and favorite blog posts, just like on Scratch!
 
-The Daily Gobo is NOT associated with the Scratch Team or organization in any way, we are completely separate.
+The Daily Gobo is **NOT** associated with the Scratch Team or organization in any way, we are completely separate.
