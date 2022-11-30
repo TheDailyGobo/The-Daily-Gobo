@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Daily Gobo</title>
+    <link href="/css/main.css" rel="stylesheet" />
+    <link href="/css/dark.css" rel="stylesheet" class="darkMode" />
+    <script src="/js/storage.js"></script>
+    <script src="/js/emojiparser.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <ul class="nav">
+        <li class="logo"><a arial-label="Scratch" href="/"></a></li>
+        <li><a href="/">The Daily Gobo</a></li>
+        <li class="right"><a href="/verify">Log In</a></li>
+        <li class="modeSwitch" onclick="darkMode()"><a>🌒</a></li>
+      </ul>
+    </div>
+    <div id="view">
+      <div class="box">
+        <div class="box-header">
+          <h4>What is The Daily Gobo?</h4>
+          <h5></h5>
+        </div>
+        <div class="box-content">
+          <p>
+            The Daily Gobo is a blog for all things Scratch! You can contribute
+            to the blog, and even favorite blog posts! You can find out all
+            about the current news and so much more!
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="box-header">
+          <h4>Trending Blogs</h4>
+          <h5></h5>
+        </div>
+        <div class="box-content">
+          <p>
+            Sign in Scratch by clicking the "Log In" button in the top right to
+            access your feed!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    if (storage.getItem("lightMode")) {
+      stylesheet.disabled = true;
+    }
+    function darkMode() {
+      var stylesheet = document.querySelector(".darkMode");
+      if (stylesheet.disabled) {
+        storage.setItem("lightMode", false);
+        stylesheet.disabled = false;
+      } else {
+        storage.setItem("lightMode", true);
+        stylesheet.disabled = true;
+      }
+    }
+  </script>
+</html>

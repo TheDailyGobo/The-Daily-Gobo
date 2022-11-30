@@ -1,0 +1,25 @@
+/*Gobo.css - css framework made mainly for the daiky gobo*/
+
+
+/*loading circle section*/
+.loading {
+    animation-name: fullrotation;
+    animation-duration: 500ms;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fullrotation {
+    1% {rotate: 0deg;}
+    100% {rotate: 360deg}
+}
+/* end of section */
+
+/* center */
+.center {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+/* end of the section */
