@@ -16,9 +16,9 @@
     console.log(window.navigator.userAgent);
     var useragent = window.navigator.userAgent;
     if (contains(useragent, 'Android') || contains(useragent, 'Ios')) {
-      window.location.replace('../html/main.html');
+      window.location.replace('../html/mobile.main.html');
     } else {
-      window.location.replace('../html/main.html');
+      window.location.replace('../html/standalone/main.html');
     }
   }
   _.main = main;
