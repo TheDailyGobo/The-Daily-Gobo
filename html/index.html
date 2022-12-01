@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" href="../images/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/gobo.css">
     <title>The daily gobo, your daily scratch news</title>
+    <style>
+      #error1 {
+        top:40em;
+        display: block;
+        position: relative;
+        opacity: 0;
+        color:black;
+        animation-delay: 10s;
+        animation-name: show;
+        animation-duration: 100ms;
+        animation-fill-mode: forwards;
+
+      }
+      @keyframes show {
+        0% {
+          display: none;
+          opacity: 0;
+        }
+
+        1% {
+          display: block;
+          opacity: 0;
+        }
+
+        100% {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      #error2 {
+        top:41em;
+        display: block;
+        position: relative;
+        opacity: 0;
+        color:black;
+        animation-delay: 10s;
+        animation-name: show;
+        animation-duration: 100ms;
+        animation-fill-mode: forwards;
+
+      }
+
+
+    </style>
   </head>
   <body style="background-color: #607CFF;">
     <script src="../node_modules/kotlin/kotlin.js"></script>
-    <script src="../js/agentdetect.js"></script>
+
     
     <img src="../images/loading.svg" class="loading center">
     <img class="center" width="150" src="../images/icon.svg">
-      
+    <p class="center-text text-bold" id="error1">It looks like Gobo probaly encountered an error, try refreshing page or if you have slow internet connection try waiting if there's no specific error under it then error code is: (errcode:1)</p>
+    <noscript>
+      <p class="center-text text-bold" id="error2">It looks like JavaScript technology is blocked by your browser<br>Try to whitelist our site in your js blocker and in your browser settings (errcode:2)</p>
+    </noscript>
   </body>
 </html>

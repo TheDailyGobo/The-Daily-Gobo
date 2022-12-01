@@ -11,17 +11,14 @@
   }
 }(this, function (_, Kotlin) {
   'use strict';
-  var listOf = Kotlin.kotlin.collections.listOf_i5x0yv$;
   var contains = Kotlin.kotlin.text.contains_li3zpu$;
   function main() {
     console.log(window.navigator.userAgent);
     var useragent = window.navigator.userAgent;
-    var desktop = listOf(['Linux', 'Windows', 'macos']);
-    var linux = 'Linux';
     if (contains(useragent, 'Android') || contains(useragent, 'Ios')) {
-      window.location.replace('../html/mobile/main.html');
+      window.location.replace('../html/main.html');
     } else {
-      window.location.replace('../html/standalone/main.html');
+      window.location.replace('../html/main.html');
     }
   }
   _.main = main;

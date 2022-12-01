@@ -22,4 +22,18 @@
     margin: auto;
 }
 
+.center-text {
+    text-align: center;
+    align-self: center;
+}
+
 /* end of the section */
+
+.text {
+    font-family: sans-serif;
+}
+
+.text-bold {
+    font-family: sans-serif;
+    font-weight: bold;
+}
