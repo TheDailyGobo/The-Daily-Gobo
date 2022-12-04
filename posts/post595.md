@@ -1,0 +1,1 @@
+Hey Bloggers! I have recent concerns regarding the studio of this site. If you are a ember who knows about the "inappropriate things" please send me a message on my profile. Thanks!

@@ -1,0 +1,2 @@
+Something annoying happened today I was posting a thing about me rating a game by @JabbaTheHutt131 (forgot to credit so i do it now) and then when I clicked post I always thought if i click and click it will load faster well im wrong their I accidently (for the 2nd time) posted multiple of the same thing over all I am sorry for the trouble.
+@MARIOPLAYER9000 out!

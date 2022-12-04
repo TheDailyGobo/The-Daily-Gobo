@@ -1,0 +1,1 @@
+Hello! If anyone is feeling sad, I hope you feel better. And lots of others do to. If you want to, you can talk to me on scratch. And remember, soemone always loves you. ❤️❤️❤️

@@ -1,0 +1,1 @@
+OMG!!!!!! new animation coming soon?well,IT IS BY YOU!It is a map made 87.5% made by you guys!(i even did the math for how much percentage you guys would get so now you have to follow me!)sadly all the spots are taken but if they don't complete there part in a month,the parts are out so it gives you guys a fighting chance!

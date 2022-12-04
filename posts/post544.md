@@ -1,0 +1,4 @@
+<h1>Formatting Your Blog Post</h1>
+
+Did you know that you can use HTML to format your blog? To make those fancy big titles you see all over The Daily Gobo, just put ‘< h1 >’ before your title and ‘< /h1 >’ after. You can also use the tags ‘< h2 > [text]< /h2 >’, ‘< h3 > [text]< /h3 >, ‘< h4 > [text]< /h4 >’ ‘< h5 > [text]< /h5 >’, ‘< h6 > [text]< /h6 >’ and so on. Additionally, you can use ‘< b >[text]< /b >’ to make <b>bold</b> text and ‘< i >[text]< /i >’ for <i>italics</i>. To create a new line (like this note below), use < br > before the text you want on a new line
+<br> *Note: please remove the spaces after < and before >. I just put them there so you could see what to type :)

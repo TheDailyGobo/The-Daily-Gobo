@@ -1,0 +1,1 @@
+<img src="https://uploads.scratch.mit.edu/projects/thumbnails/658884646.png" alt="Featured project"/>

@@ -1,0 +1,1 @@
+Hey, quick idea: there should be a favicon for this website. Maybe gobo? Just throwing that out there.

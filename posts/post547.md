@@ -1,0 +1,1 @@
+When you go to someone's profile, hovering over one of their emojis should describe what it means.

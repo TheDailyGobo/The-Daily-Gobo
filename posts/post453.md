@@ -1,0 +1,1 @@
+Hello fellow scratchers!! We do need to do something about global warming. I think if the whole daily gobo force stands up, we might just be able to do something! 

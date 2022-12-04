@@ -1,0 +1,1 @@
+The Daily Gobo studio is gone. Anybody know what happened to it?

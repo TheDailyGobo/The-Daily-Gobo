@@ -1,0 +1,1 @@
+Sometimes you just have those moments where you realize you made a BIG mistake. Maybe you accidentally erased your entire hard drive, or you spilled a glass of milk on your dad's favourite chair. Whatever the case, you can learn from those few brief ohnoseconds<sup>[[1]](https://en.wiktionary.org/wiki/ohnosecond)</sup> and *not* do it next time.

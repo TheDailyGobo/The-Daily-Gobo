@@ -1,0 +1,1 @@
+I am very happy to announce that I am rejoining The Daily Gobo! After quitting The Daily Gobo for a couple of days I couldn't stop thinking about it! I kept on visiting the site and very happy to be back! You may welcome me back in your own form!

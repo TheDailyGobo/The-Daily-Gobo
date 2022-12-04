@@ -1,0 +1,1 @@
++' We just deleted <a href="/post/'+req.params.post+'/">one of your posts</a>.')

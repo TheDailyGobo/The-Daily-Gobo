@@ -1,0 +1,1 @@
+<a href = https://scratch.mit.edu/studios/32315575/> The studio for The Daily Gobo is back! </a><br> I know this is a short post, but there's nothing else to say but the fact that everyone (including me) must be very excited by this. Go, Gobo!

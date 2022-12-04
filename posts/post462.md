@@ -1,0 +1,1 @@
+If you have a big idea, share it! You always need to ask for help. Never attempt any big projects alone. I'm working on a BIG project called Sonic Strikers, and right now, I'm looking for a team. I obviously cannot handle this alone, so I need to look for help. If you have a big idea too, look for help! It'll be helpful (duh).

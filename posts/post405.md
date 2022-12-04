@@ -1,0 +1,1 @@
+Hello I want to say that I am sadly quitting The Daily Gobo. Sorry!

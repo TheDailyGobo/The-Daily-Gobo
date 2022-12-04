@@ -1,0 +1,1 @@
+So it won't let me get to the Daily gobo studio, did someone block it?

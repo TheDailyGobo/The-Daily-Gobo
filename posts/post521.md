@@ -1,0 +1,3 @@
+I've seen a lot of people on Scratch say they can't code. If you think you can't code, that's not true. Becoming a good coder has nothing to do with natural skill. It has everything to do with how many new concepts you try. For example; The first time I saw a save code function I didn't know it was even possible to create. I thought that it was the most impossible thing that ever existed in Scratch (exaggerating). I was thinking "Eh, I won't even bother." But then one day, I decided to use my logic to see how it would work, and guess what? I successfully created a save code!
+
+In other words, saying you can't do something will only motivate you less to do it, and you might not even try. So, have a growth mindset and try to code something new today!

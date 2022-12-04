@@ -1,0 +1,1 @@
+sorry i wasn't active, recently i made a new account for alphabet lore RPs, can you guess what it is?

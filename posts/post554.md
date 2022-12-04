@@ -1,0 +1,1 @@
+The Endless Game Jam (E.G.J.) Is Here Submit Your ENDLESS GAMES To join go to: https://scratch.mit.edu/studios/32291342 Rules are in studio description i will post later who won!

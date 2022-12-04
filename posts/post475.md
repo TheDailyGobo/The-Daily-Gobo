@@ -1,0 +1,1 @@
+Question for the daily gobo team: what happened to the images? Every time I put the image link It wont work, even though its a small image. Please Answer in my profile

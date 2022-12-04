@@ -1,0 +1,1 @@
+I have quit the daily gobo forever! you may delete my account!

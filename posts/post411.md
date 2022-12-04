@@ -1,0 +1,3 @@
+Hello! This is @MolOtt. I wanted to propose an idea to improve the Daily Gobo. I think a report button should be added. This would make the mods job a whole lot easier, and users could help make sure the site is completely friendly. I would also like to propose the idea of a userpage. There are userpages on Scratch Wiki and it just shows that userpage could be used to help Scratchers introduce themselves and it would be easier for users to find these peoples profiles on Scratch. I hope you consider these ideas!
+
+-MolOtt

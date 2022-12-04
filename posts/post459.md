@@ -1,0 +1,1 @@
+Hello! I'm new here! today I will be writing on a project that has many people hooked. It is called alphabet lore and it is a sequence of strange shorts inspired by a youtube series of the same name

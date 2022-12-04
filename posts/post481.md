@@ -1,0 +1,1 @@
+can you please add a way to view easily how many hearts and stars a post gets?

@@ -1,0 +1,1 @@
+I want to congratulate [@username_128](https://scratch.mit.edu/users/username_128/) for getting their project [Burger Bounce V1.6](https://scratch.mit.edu/projects/736531174/) featured! Also a tip to get popular! Add your projects to featured studios!  @jjchang1 out!

@@ -1,0 +1,1 @@
+Hello guys sometimes I want to leave The Daily Gobo because I am kind of mad at sciencedolphin9! I am not trying to be mean but I may become inactive for a while! Scratch On!

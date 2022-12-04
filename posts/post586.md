@@ -1,0 +1,1 @@
+Is it just me or do you think the Gobo slowly losing its writers?

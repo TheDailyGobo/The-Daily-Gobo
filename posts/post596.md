@@ -1,0 +1,2 @@
+Hello everyone! Let's take the time to congratulate [@-10eden](https://scratch.mit.edu/users/-10eden/) for getting their project [crazy kitchen V1.0](https://scratch.mit.edu/projects/743075446/) featured!I tried it and is mostly about accuracy and moving an egg or burger away from a knife! In my opinion it is very difficult! A tip to get popular: Always be friendly and follow the [community guidelines](https://scratch.mit.edu/community_guidelines)! That's all for now! Scratch On! 
+       -[@jjchang1](https://scratch.mit.edu/users/jjchang1)

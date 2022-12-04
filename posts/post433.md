@@ -1,0 +1,3 @@
+Scratchtober started 2 days ago! The prompt for today is pattern, you can also do past prompts like bat, or dessert
+What is scratchtober?
+Scratchtober, inspired by Inktober, will provide a list of random prompts (words, ideas, themes) for you to use as inspiration. From these prompts you can create artwork, games, animations, stories, tutorials, or whatever else you can imagine! Prompts will be shared in a project starting Monday, October 17, 2022.

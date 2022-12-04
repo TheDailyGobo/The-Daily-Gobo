@@ -1,0 +1,1 @@
+A quick update from our side. Thanks to @rgantzos, we now have auto saved posts that save to your computer, so you don't lose progress! It will show you if a post is saved under the post button when you are making a post :)

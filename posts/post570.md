@@ -1,0 +1,3 @@
+This is about @HollowGoblin s game Gourd Thief you can find this game at https://scratch.mit.edu/projects/741148981
+Simple concept you use arrow keys (or wasd) to move and hold down arrow on a gourd which is the orange things that grow on the ground and you begin stealing it it ~3.5 sec to pick up the gourd but while your doing that the angry farmer trys take you out if you get hit your out I love how simple it is and its very fun to play! Theirs also a personal high score which is really neat to have! If I were to rate this I would give it a 8.7/10 since I wasnt a fan of the farmers or the skeletons looks (which isnt a big deal) and thats a wrap from @MARIOPLAYER9000 rates!
+"intense applause"

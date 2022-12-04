@@ -1,0 +1,1 @@
+Hey everyone! This is my first post on here, and I just want to say hello! I'm new to "The Daily Gobo" and I'd like to see what it's all about!

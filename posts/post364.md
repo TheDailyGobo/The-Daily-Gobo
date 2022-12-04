@@ -1,0 +1,1 @@
+Someone please help me put images in the blogs because I would really love to put the featured project photo.

@@ -1,0 +1,2 @@
+#Another Scratcher Leaves Scratch!
+A scratcher named NN0717 (or Nome), an animator with over a thousand followers, is choosing to flip a coin whether he is staying or leaving Scratch forever. Despite his friends begging him to stay, the situation is not clear at this point.

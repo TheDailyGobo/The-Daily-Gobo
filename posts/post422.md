@@ -1,0 +1,2 @@
+Hello everybody! How are you guys? <3
+QOTD is...whats your fave holiday? Mine is Halloween, which is coming up soon! OMG so excited. I am going to be making Halloween projects soon, but none are out yet. Keep a look out on my profile: https://scratch.mit.edu/users/FurryFan2468/

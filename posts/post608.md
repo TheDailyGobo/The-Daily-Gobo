@@ -1,0 +1,1 @@
+Hey everyone, just wanted to let you know that we are working on ScratchTools integration, which will brings stats and advanced profiles to The Daily Gobo. Thanks for using TDG!

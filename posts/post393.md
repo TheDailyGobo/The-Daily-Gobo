@@ -1,0 +1,1 @@
+it looks like the link to my post has disapeared well here it is: https://scratch.mit.edu/users/TheComputorBoss9776
