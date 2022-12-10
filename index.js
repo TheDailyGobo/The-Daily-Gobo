@@ -1,3 +1,13 @@
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const uri = process.env.db;
+const dbClient = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+async function connectToDb() {
+await dbClient.connect()
+  var collection = await dbClient.db("TDG").collection("messages")
+  console.log("connected to db")
+}
+connectToDb()
+
 // database
 const Database = require("@replit/database")
 const db = new Database()
@@ -468,6 +478,30 @@ app.get('/users/', async function(req, res) {
   }
   } else {
     res.sendStatus(403)
+  }
+})
+
+app.post("/comment/", jsonParser, async function(req, res) {
+  const tokens = await db.get("tokens")
+  if (getCookie('usertoken', req) && Object.keys(tokens).includes(getCookie('usertoken', req))) {
+    var user = tokens[getCookie('usertoken', req)]
+    if (req.body.original && req.body.content && typeof req.body.content === "string" && typeof req.body.original === "string") {
+      await dbClient.db("TDG").collection("comments").insertOne({
+        author: user,
+        content: req.body.content,
+        original: req.body.original,
+      })
+      res.send({"success":true})
+    }
+  }
+})
+
+app.get("/comments/:original/", async function(req, res) {
+  var comments = await dbClient.db("TDG").collection("comments").find({ original: req.params.original }).toArray()
+  if (comments) {
+    res.send(comments)
+  } else {
+    res.send([])
   }
 })
 
