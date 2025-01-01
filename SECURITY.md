@@ -4,3 +4,5 @@ Hello! This is the official licensing of The Daily Gobo. Any content here is fan
 We are not the official Scratch Team!
 
 Credits to the Scratch Team for creating the Scratch we know and love today.
+
+We made Scratch Tools so please check that out!
