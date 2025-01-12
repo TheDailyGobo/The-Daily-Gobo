@@ -5,4 +5,4 @@ We are not the official Scratch Team!
 
 Credits to the Scratch Team for creating the Scratch we know and love today.
 
-We made Scratch Tools so please check that out!
+We made ScratchTools, so please check that out!
