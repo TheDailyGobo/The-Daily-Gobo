@@ -6,3 +6,5 @@ We use ScratchAuth for our site, so that users can verify themselves with their 
 The Daily Gobo is NOT associated with the Scratch Team or organization in any way, we are completely separate. This is completely fan-made property.
 
 For info about the Community Guidelines, why not check out the ones on Scratch? Our rules are similar to them.
+
+Unofficial.
